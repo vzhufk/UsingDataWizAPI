@@ -21,6 +21,14 @@
             <td>Date of opening:</td>
             <td>{{ shop.open_date }}</td>
         </tr>
+        <tr>
+            <td>Sale:</td>
+            <td><a href="/sale/{{ id }}">{{ shop.name }} sale</a> </td>
+        </tr>
+        <tr>
+            <td>Turnover:</td>
+            <td><a href="/turnover/{{ id }}">{{ shop.name }} turnover</a></td>
+        </tr>
     </table>
     </body>
 </html>

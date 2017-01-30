@@ -20,5 +20,7 @@ from application import views
 urlpatterns = [
     url(r'^$', views.sign, name='sign'),
     url(r'^user.html$', views.user, name='user'),
-    url(r'^shop/(?P<key>[0-9]+)$', views.shop, name='shop')
+    url(r'^shop/(?P<key>[0-9]+)$', views.shop, name='shop'),
+    url(r'^sale/(?P<key>[0-9]+)$', views.sale, name='sale'),
+    url(r'^turnover/(?P<key>[0-9]+)$', views.turnover, name='turnover')
 ]

@@ -7,8 +7,8 @@
         <br> {{ user.date_from }} - {{ user.date_to }}
         <br>Shops:
         <ul>
-        {% for key in user.shops %}
-            <li><a href="shop/{{ key }}">{{ user.shops|get_item:key }}</a></li>
+        {% for key, value in shops.items %}
+            <li><a href="shop/{{ key }}">{{ value.name }} ({{ value.address }})</a></li>
         {% endfor %}
         </ul>
     </body>

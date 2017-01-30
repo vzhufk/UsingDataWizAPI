@@ -1,1 +1,30 @@
+<html>
 
+    <head>
+        <title>{{ name }} sale info</title>
+    </head>
+    <body>
+    <form method="POST">
+        {% csrf_token %}
+        <input name="date_from" type="date" value="{{ date_from }}">
+        <input name="date_to" type="date" value="{{ date_to }}">
+        <button type="submit">Recount</button>
+    </form>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Product</th>
+            <th>Turnover change</th>
+            <th>Sale change</th>
+        </tr>
+        {%  for key, value in data.items %}
+        <tr>
+            <td>{{key}}</td>
+            <td>{{value.name}}</td>
+            <td>{{value.turnover}}</td>
+            <td>{{value.sale}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </body>
+</html>

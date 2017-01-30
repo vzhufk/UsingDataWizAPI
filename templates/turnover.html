@@ -1,0 +1,51 @@
+<html>
+
+    <head>
+        <title>{{ name }} turnover info</title>
+    </head>
+    <body>
+    <form method="POST">
+        {% csrf_token %}
+        <input name="date_from" type="date" value="{{ date_from }}">
+        <input name="date_to" type="date" value="{{ date_to }}">
+        <button type="submit">Recount</button>
+    </form>
+    <table>
+        <tr>
+            <th>Value</th>
+            <th>{{ date_from }}</th>
+            <th>{{ date_to }}</th>
+            <th>Percent difference</th>
+            <th>Difference</th>
+        </tr>
+        <tr>
+            <td>Turnover</td>
+            <td>{{ data.from.turnover }}</td>
+            <td>{{ data.to.turnover }}</td>
+            <td>{{ data.percent.turnover }}</td>
+            <td>{{ data.difference.turnover }}</td>
+        </tr>
+        <tr>
+            <td>Amount of products</td>
+            <td>{{ data.from.products }}</td>
+            <td>{{ data.to.products }}</td>
+            <td>{{ data.percent.products }}</td>
+            <td>{{ data.difference.products }}</td>
+        </tr>
+        <tr>
+            <td>Amount of receipts</td>
+            <td>{{ data.from.receipts }}</td>
+            <td>{{ data.to.receipts }}</td>
+            <td>{{ data.percent.receipts }}</td>
+            <td>{{ data.difference.receipts }}</td>
+        </tr>
+        <tr>
+            <td>Average receipt</td>
+            <td>{{ data.from.average_receipt }}</td>
+            <td>{{ data.to.average_receipt }}</td>
+            <td>{{ data.percent.average_receipt }}</td>
+            <td>{{ data.difference.average_receipt }}</td>
+        </tr>
+    </table>
+    </body>
+</html>
