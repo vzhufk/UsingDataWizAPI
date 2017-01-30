@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title> Shop - {{ id }} </title>
+    </head>
+
+    <body>
+    <table>
+        <tr>
+            <td>Name: </td>
+            <td>{{ shop.name }}</td>
+        </tr>
+        <tr>
+            <td>Location:</td>
+            <td><a href="http://maps.google.com/?q={{ shop.address }}">{{ shop.address }}</a></td>
+        </tr>
+        <tr>
+            <td>Latitude:</td>
+            <td>{{ shop.latitude }}</td>
+        </tr>
+        <tr>
+            <td>Date of opening:</td>
+            <td>{{ shop.open_date }}</td>
+        </tr>
+    </table>
+    </body>
+</html>

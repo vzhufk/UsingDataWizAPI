@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>{{ user.name }} Page</title>
+    </head>
+    <body>
+        <br>Welcome <b>{{ user.name }}</b>!
+        <br> {{ user.date_from }} - {{ user.date_to }}
+        <br>Shops:
+        <ul>
+        {% for key in user.shops %}
+            <li><a href="shop/{{ key }}">{{ user.shops|get_item:key }}</a></li>
+        {% endfor %}
+        </ul>
+    </body>
+</html>
