@@ -37,7 +37,7 @@ def sign(request):
             'login': "test1@mail.com",
             'password': "test2@cbe47a5c9466fe6df05f04264349f32b"
         }
-        return render_to_response("sign.html", context, context_instance=RequestContext(request))
+        return render(request, "sign.html", context)
     elif request.method == 'POST':
         dw = datawiz.DW(request.POST['login'], request.POST['password'])
         # if signed
