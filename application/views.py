@@ -1,14 +1,10 @@
 import datetime
-from django.http import HttpResponse
-from django.http import HttpResponseRedirect
-from django.shortcuts import render, render_to_response
-
-# Create your views here.
-from django.template import RequestContext
-from django.template import loader
-from django.template.defaulttags import register
 
 from django.core.cache import cache
+from django.http import HttpResponse
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.template import loader
 
 from dwapi import datawiz
 
@@ -159,13 +155,20 @@ def sale(request, key):
                                         date_to=date_to, view_type="represent")
         qty = dw.get_products_sale(shops=int(key), by='qty', date_from=date_from,
                                    date_to=date_to, view_type="represent")
-        tmp = list(qty.head())
-        # TODO GET SHOPS NAMES (tmp not JSON serializable)
-        # products = dw.get_product(product=tmp)
+        # Because numpy.int64 "is not JSON serializable"
+        # And Sorry :(
+        products_numpy = list(qty.head())
+        products_int = []
+        for i in products_numpy:
+            products_int.append(i.item())
+        products_list = dw.get_product(products=products_int)['results']
+        products = {}
+        for i in products_list:
+            products[i['product_id']] = i
         data = {}
-        for i in qty:
+        for i in products:
             data[i] = {
-                'name': i,
+                'product': products[i],
                 'turnover': turnover.at[date_to.strftime('%Y-%m-%d'), i] - turnover.at[
                     date_from.strftime('%Y-%m-%d'), i],
                 'sale': qty.at[date_to.strftime('%Y-%m-%d'), i] - qty.at[date_from.strftime('%Y-%m-%d'), i],
