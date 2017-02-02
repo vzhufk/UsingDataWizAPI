@@ -10,7 +10,8 @@
         <input name="date_to" type="date" value="{{ date_to }}">
         <button type="submit">Recount</button>
     </form>
-    <table>
+    <table border="1" cellpadding="0" cellspacing="2" style="width:50%;float:left" >
+    <caption>Raised in sale</caption>
         <tr>
             <th>ID</th>
             <th>Product</th>
@@ -18,12 +19,33 @@
             <th>Sale change</th>
         </tr>
         {%  for key, value in data.items %}
+            {% if value.sale > 0 %}
+                <tr>
+                    <td>{{key}}</td>
+                    <td>{{value.product.product_name}}</td>
+                    <td>{{value.turnover}}</td>
+                    <td>{{value.sale}}</td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+    <table border="1" cellpadding="0" cellspacing="2" style="width:50%;float:left" >
+    <caption>Fall in sale</caption>
         <tr>
-            <td>{{key}}</td>
-            <td>{{value.product.product_name}}</td>
-            <td>{{value.turnover}}</td>
-            <td>{{value.sale}}</td>
+            <th>ID</th>
+            <th>Product</th>
+            <th>Turnover change</th>
+            <th>Sale change</th>
         </tr>
+        {%  for key, value in data.items %}
+            {% if value.sale < 0 %}
+                <tr>
+                    <td>{{key}}</td>
+                    <td>{{value.product.product_name}}</td>
+                    <td>{{value.turnover}}</td>
+                    <td>{{value.sale}}</td>
+                </tr>
+            {% endif %}
         {% endfor %}
     </table>
     </body>
