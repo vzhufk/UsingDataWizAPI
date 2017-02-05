@@ -25,7 +25,7 @@ SECRET_KEY = '^x9d%!@oo7jzutx84+k&4x)kajp%a+f43faad4&gqq+(5t0zrt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["datawizapi.herokuapp.com", "*"]
 
 
 # Application definition
