@@ -120,7 +120,7 @@ def turnover(request, key):
             'average_receipt': data['difference']['average_receipt'] / data['from']['average_receipt'] * 100,
         }
 
-        cache.set('turnover:' + date_from_str + "/" + date_to_str, data, CACHE_TIMEOUT)
+        cache.set('turnover:' + date_from_str + "/" + date_to_str, data)
 
     context = {
         'name': current['name'],
@@ -173,7 +173,7 @@ def sale(request, key):
                     date_from.strftime('%Y-%m-%d'), i],
                 'sale': qty.at[date_to.strftime('%Y-%m-%d'), i] - qty.at[date_from.strftime('%Y-%m-%d'), i],
             }
-        cache.set('sale:' + date_from_str + "/" + date_to_str, data, CACHE_TIMEOUT)
+        cache.set('sale:' + date_from_str + "/" + date_to_str, data)
 
     context = {
         'name': current['name'],
