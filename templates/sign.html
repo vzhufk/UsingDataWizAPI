@@ -4,12 +4,12 @@
         <title>Welcome dear client!</title>
     </head>
     <body>
-    <img src="http://trademaster.ua/im/7649690-logo-2.png">
+    <img src="http://trademaster.ua/im/7649690-logo-2.png" >
     <form method="POST">
         {% csrf_token %}
-        <br><input name="login" type="text" value="{{ login }}">
-        <br><input name="password" type="password" value="{{ password }}">
-        <br><button type="submit" style="width:175px">Sign In</button>
+        <br><input name="login" type="text" value="{{ login }}" size="53">
+        <br><input name="password" type="password" value="{{ password }}" size="53">
+        <br><button type="submit" style="width:405px">Sign In</button>
     </form>
     </body>
 </html>
