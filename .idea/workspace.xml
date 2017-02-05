@@ -4,6 +4,7 @@
     <list default="true" id="db5afdc5-0b98-4263-bc8f-9bec73702919" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views.py" afterPath="$PROJECT_DIR$/application/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/sign.html" afterPath="$PROJECT_DIR$/templates/sign.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,14 +25,24 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="193" column="34" lean-forward="false" selection-start-line="193" selection-start-column="34" selection-end-line="193" selection-end-column="34" />
+            <state relative-caret-position="78">
+              <caret line="134" column="60" lean-forward="false" selection-start-line="134" selection-start-column="60" selection-end-line="134" selection-end-column="60" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <element signature="e#1356#1713#0" expanded="false" />
                 <element signature="e#1744#2049#0" expanded="false" />
-                <element signature="e#2084#5139#0" expanded="false" />
+                <element signature="e#5170#7378#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sign.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/sign.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="59" lean-forward="false" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -103,11 +114,11 @@
         <option value="$PROJECT_DIR$/templates/user.html" />
         <option value="$PROJECT_DIR$/templates/turnover.html" />
         <option value="$PROJECT_DIR$/templates/shop.html" />
-        <option value="$PROJECT_DIR$/templates/sign.html" />
         <option value="$PROJECT_DIR$/requirments.txt" />
         <option value="$PROJECT_DIR$/runtime.txt" />
         <option value="$PROJECT_DIR$/templates/sale.html" />
         <option value="$PROJECT_DIR$/UsingDataWizAPI/settings.py" />
+        <option value="$PROJECT_DIR$/templates/sign.html" />
         <option value="$PROJECT_DIR$/application/views.py" />
       </list>
     </option>
@@ -609,7 +620,14 @@
       <option name="project" value="LOCAL" />
       <updated>1486316523978</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="I cached like and idiot">
+      <created>1486316912298</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1486316912298</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -681,11 +699,12 @@
     <MESSAGE value="Cache cfg in settings" />
     <MESSAGE value="Heroku cache fix" />
     <MESSAGE value="Heroku cache fix&#10;DW is NoneType fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Heroku cache fix&#10;DW is NoneType fix" />
+    <MESSAGE value="I cached like and idiot" />
+    <option name="LAST_COMMIT_MESSAGE" value="I cached like and idiot" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="41" />
+      <option name="time" value="42" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -978,13 +997,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/sign.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/shop.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1036,15 +1048,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/sign.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="59" lean-forward="false" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="193" column="34" lean-forward="false" selection-start-line="193" selection-start-column="34" selection-end-line="193" selection-end-column="34" />
+        <state relative-caret-position="78">
+          <caret line="134" column="60" lean-forward="false" selection-start-line="134" selection-start-column="60" selection-end-line="134" selection-end-column="60" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
             <element signature="e#1356#1713#0" expanded="false" />
             <element signature="e#1744#2049#0" expanded="false" />
-            <element signature="e#2084#5139#0" expanded="false" />
+            <element signature="e#5170#7378#0" expanded="false" />
           </folding>
         </state>
       </provider>

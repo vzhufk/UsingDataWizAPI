@@ -103,7 +103,7 @@ def turnover(request, key):
 
     date_from_str = date_from.strftime('%Y-%m-%d')
     date_to_str = date_to.strftime('%Y-%m-%d')
-    data = cache.get('shop'+int(key)+'-turnover:' + date_from_str + "/" + date_to_str)
+    data = cache.get('shop'+str(key)+'-turnover:' + date_from_str + "/" + date_to_str)
 
     if data is None:
         turn = dw.get_categories_sale(categories=['sum'], shops=int(key), by='turnover',
@@ -136,7 +136,7 @@ def turnover(request, key):
             'average_receipt': data['difference']['average_receipt'] / data['from']['average_receipt'] * 100,
         }
 
-        cache.set('shop'+int(key)+'-turnover:' + date_from_str + "/" + date_to_str, data)
+        cache.set('shop'+str(key)+'-turnover:' + date_from_str + "/" + date_to_str, data)
 
     context = {
         'name': current['name'],
@@ -167,7 +167,7 @@ def sale(request, key):
 
     date_from_str = date_from.strftime('%Y-%m-%d')
     date_to_str = date_to.strftime('%Y-%m-%d')
-    data = cache.get('shop'+int(key)+'sale:' + date_from_str + "/" + date_to_str)
+    data = cache.get('shop'+str(key)+'sale:' + date_from_str + "/" + date_to_str)
     if data is None:
         turnover = dw.get_products_sale(shops=int(key), by='turnover', date_from=date_from,
                                         date_to=date_to, view_type="represent")
@@ -191,7 +191,7 @@ def sale(request, key):
                     date_from.strftime('%Y-%m-%d'), i],
                 'sale': qty.at[date_to.strftime('%Y-%m-%d'), i] - qty.at[date_from.strftime('%Y-%m-%d'), i],
             }
-        cache.set('shop'+int(key)+'sale:' + date_from_str + "/" + date_to_str, data)
+        cache.set('shop'+str(key)+'sale:' + date_from_str + "/" + date_to_str, data)
 
     context = {
         'name': current['name'],
