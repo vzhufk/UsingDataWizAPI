@@ -20,6 +20,7 @@ CACHE_TIMEOUT = 60 * 5
 
 # Because of Heroku cache specifics
 def client_info():
+    global dw
     if dw is not None:
         if cache.get('client_info') is None:
             cache.set('client_info', dw.get_client_info())
@@ -58,6 +59,7 @@ def user(request):
     :return:
     GET: Client info and client shops
     """
+    global dw
     client_info()
 
     template = loader.get_template('user.html')
@@ -76,6 +78,7 @@ def shop(request, key):
     :return:
     GET: Shop info
     """
+    global dw
     client_info()
 
     template = loader.get_template('shop.html')
@@ -90,6 +93,7 @@ def turnover(request, key):
     :param key: Shop ID
     :return: Shop Turnover Data
     """
+    global dw
     client_info()
 
     template = loader.get_template('turnover.html')
@@ -154,6 +158,7 @@ def sale(request, key):
     :param key: Shop ID
     :return: Shop Sale Data
     """
+    global dw
     client_info()
 
     template = loader.get_template("sale.html")
