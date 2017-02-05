@@ -25,6 +25,8 @@ def client_info():
             cache.set('client_info', dw.get_client_info())
         if cache.get('shops') is None:
             cache.set('shops', dw.get_shops())
+    else:
+        return HttpResponseRedirect("/sign.html")
 
 
 def sign(request):
