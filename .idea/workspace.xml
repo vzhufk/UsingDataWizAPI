@@ -24,10 +24,13 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-24">
-              <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="28" />
+            <state relative-caret-position="295">
+              <caret line="193" column="34" lean-forward="false" selection-start-line="193" selection-start-column="34" selection-end-line="193" selection-end-column="34" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#1356#1713#0" expanded="false" />
+                <element signature="e#1744#2049#0" expanded="false" />
+                <element signature="e#2084#5139#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -599,7 +602,14 @@
       <option name="project" value="LOCAL" />
       <updated>1486316300935</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Heroku cache fix&#10;DW is NoneType fix">
+      <created>1486316523978</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1486316523978</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -670,7 +680,8 @@
     <MESSAGE value="Cache and Doc" />
     <MESSAGE value="Cache cfg in settings" />
     <MESSAGE value="Heroku cache fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Heroku cache fix" />
+    <MESSAGE value="Heroku cache fix&#10;DW is NoneType fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Heroku cache fix&#10;DW is NoneType fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1027,10 +1038,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="28" />
+        <state relative-caret-position="295">
+          <caret line="193" column="34" lean-forward="false" selection-start-line="193" selection-start-column="34" selection-end-line="193" selection-end-column="34" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#1356#1713#0" expanded="false" />
+            <element signature="e#1744#2049#0" expanded="false" />
+            <element signature="e#2084#5139#0" expanded="false" />
           </folding>
         </state>
       </provider>
