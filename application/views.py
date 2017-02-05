@@ -38,7 +38,6 @@ def sign(request):
     POST: Login user and redirect to User page
     """
     global dw
-    dw = None
 
     if request.method == 'GET':
         context = {
