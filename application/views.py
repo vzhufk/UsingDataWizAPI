@@ -18,6 +18,15 @@ DEF_DATE_TO = "2015-11-18"
 CACHE_TIMEOUT = 60 * 5
 
 
+# Because of Heroku cache specifics
+def client_info():
+    if dw is not None:
+        if cache.get('client_info') is None:
+            cache.set('client_info', dw.get_client_info())
+        if cache.get('shops') is None:
+            cache.set('shops', dw.get_shops())
+
+
 def sign(request):
     """
     :param request: HTTP Request
@@ -37,8 +46,7 @@ def sign(request):
     elif request.method == 'POST':
         dw = datawiz.DW(request.POST['login'], request.POST['password'])
         # if signed
-        cache.set('client_info', dw.get_client_info())
-        cache.set('shops', dw.get_shops())
+        client_info()
         return HttpResponseRedirect("/user.html")
 
 
@@ -48,6 +56,8 @@ def user(request):
     :return:
     GET: Client info and client shops
     """
+    client_info()
+
     template = loader.get_template('user.html')
     if request.method == 'GET':
         context = {
@@ -64,6 +74,8 @@ def shop(request, key):
     :return:
     GET: Shop info
     """
+    client_info()
+
     template = loader.get_template('shop.html')
     context = {'id': key,
                'shop': cache.get('shops')[int(key)]}
@@ -76,6 +88,8 @@ def turnover(request, key):
     :param key: Shop ID
     :return: Shop Turnover Data
     """
+    client_info()
+
     template = loader.get_template('turnover.html')
     current = cache.get('shops')[int(key)]
     if request.method == 'POST':
@@ -138,6 +152,8 @@ def sale(request, key):
     :param key: Shop ID
     :return: Shop Sale Data
     """
+    client_info()
+
     template = loader.get_template("sale.html")
     current = cache.get('shops')[int(key)]
     if request.method == 'POST':
