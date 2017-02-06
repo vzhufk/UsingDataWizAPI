@@ -1,3 +1,4 @@
+patterns
 requests==2.13.0
 httpsig==1.1.2
 pandas==0.17.0

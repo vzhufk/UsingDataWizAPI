@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^x9d%!@oo7jzutx84+k&4x)kajp%a+f43faad4&gqq+(5t0zrt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["datawizapi.herokuapp.com", "*"]
 
