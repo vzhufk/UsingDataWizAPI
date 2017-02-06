@@ -10,13 +10,14 @@
     <tr><th>Navigation:</th></tr>
     <tr><td><a href="#raised">Raised</a></td></tr>
     <tr><td><a href="#fall">Fall</a></td></tr>
-    </table>
     <form method="POST">
         {% csrf_token %}
-        <input name="date_from" type="date" value="{{ date_from }}">
-        <input name="date_to" type="date" value="{{ date_to }}">
-        <br><button type="submit">Recount</button>
+        <tr><td><input name="date_from" type="date" value="{{ date_from }}"></td></tr>
+        <tr><td><input name="date_to" type="date" value="{{ date_to }}"></td></tr>
+        <tr><td><button type="submit">Recount</button></td></tr>
     </form>
+    </table>
+
 
     <table id="raised">
     <caption>Raised in sale</caption>
