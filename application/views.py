@@ -10,7 +10,7 @@ from dwapi import datawiz
 
 # dw = datawiz.DW("test1@mail.com", "test2@cbe47a5c9466fe6df05f04264349f32b")
 
-#dw = None
+dw = None
 
 DEF_DATE_FROM = "2015-11-17"
 DEF_DATE_TO = "2015-11-18"
