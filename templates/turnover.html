@@ -2,15 +2,17 @@
 
     <head>
         <title>{{ name }} turnover info</title>
+        {% load static %}
+        <link rel="stylesheet" href="{%  static "css/style.css"%}">
     </head>
     <body>
     <form method="POST">
         {% csrf_token %}
         <input name="date_from" type="date" value="{{ date_from }}">
         <input name="date_to" type="date" value="{{ date_to }}">
-        <button type="submit">Recount</button>
+        <br><button type="submit">Recount</button>
     </form>
-    <table border="1" cellpadding="0" cellspacing="2" style="width:50%;float:left">
+    <table>
         <tr>
             <th>Value</th>
             <th>{{ date_from }}</th>

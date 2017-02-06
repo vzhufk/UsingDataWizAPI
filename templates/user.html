@@ -1,15 +1,18 @@
 <html>
     <head>
         <title>{{ user.name }} Page</title>
+        {% load static %}
+        <link rel="stylesheet" href="{%  static "css/style.css"%}">
     </head>
     <body>
-        <br>Welcome <b>{{ user.name }}</b>!
-        <br> {{ user.date_from }} - {{ user.date_to }}
-        <br>Shops:
-        <ul>
+    <table>
+        <tr><th>Welcome {{ user.name }}</th></tr>
+        <tr><td>{{ user.date_from }} - {{ user.date_to }}</td></tr>
+        <tr><th>Shops:</th></tr>
+
         {% for key, value in shops.items %}
-            <li><a href="shop/{{ key }}">{{ value.name }} ({{ value.address }})</a></li>
+            <tr><td><a href="shop/{{ key }}">{{ value.name }} ({{ value.address }})</a></td></tr>
         {% endfor %}
-        </ul>
+    </table>
     </body>
 </html>

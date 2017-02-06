@@ -1,0 +1,59 @@
+body{
+    font-family: 'roboto', sans-serif;
+    transition: all 0.3s ease-in-out;
+    font-variant: small-caps;    
+    background: #4454ff;
+    color: #C5CAE9;
+    align-content: center;
+    margin: 0;
+}
+
+a{
+    color: #C5CAE9;
+}
+a:visited{
+    color: #ad7ad0;
+}
+
+.scroll{
+    position: fixed;
+}
+
+form {
+  text-align: center;
+}
+
+table{
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td{
+    padding: 5px;
+}
+th{
+    font-style: normal;
+    font-variant: small-caps;
+    background: #212121;
+    color: #BDBDBD;
+    opacity: 0.88;
+}
+tr:hover {
+    background-color: #525fa8;
+}
+tr{
+    background: #3F51B5;
+}
+tr:nth-child(odd) {
+    background:  #303F9F;
+}
+
+tr:nth-child(odd):hover {
+    background: #525fa8;
+}
+
+td{
+    border-bottom: 1px solid #9E9E9E;
+}
+

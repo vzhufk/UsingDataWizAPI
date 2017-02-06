@@ -17,14 +17,10 @@ DEF_DATE_TO = "2015-11-18"
 
 # Because of Heroku cache specifics
 def client_info():
-    global dw
-    if dw is not None:
         if cache.get('client_info') is None:
             cache.set('client_info', dw.get_client_info())
         if cache.get('shops') is None:
             cache.set('shops', dw.get_shops())
-    else:
-        return HttpResponseRedirect("/sign.html")
 
 
 def sign(request):

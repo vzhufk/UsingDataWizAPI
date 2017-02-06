@@ -1,6 +1,8 @@
 <html>
     <head>
         <title> Shop - {{ id }} </title>
+        {% load static %}
+        <link rel="stylesheet" href="{%  static "css/style.css"%}">
     </head>
 
     <body>
@@ -8,6 +10,10 @@
         <tr>
             <th>Name: </th>
             <th>{{ shop.name }}</th>
+        </tr>
+        <tr>
+            <th><a href="/sale/{{ id }}">Sale</a></th>
+            <th><a href="/turnover/{{ id }}">Turnover</a></th>
         </tr>
         <tr>
             <td>Location:</td>
@@ -21,10 +27,8 @@
             <td>Date of opening:</td>
             <td>{{ shop.open_date }}</td>
         </tr>
+
     </table>
-    <ul>
-        <li><a href="/turnover/{{ id }}">Turnover</a></li>
-        <li><a href="/sale/{{ id }}">Sale</a></li>
-    </ul>
+
     </body>
 </html>
