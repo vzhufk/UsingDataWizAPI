@@ -6,12 +6,15 @@
         <link rel="stylesheet" href="{%  static "css/style.css"%}">
     </head>
     <body>
+    <table class="scroll">
+    <tr><th>Navigation:</th></tr>
     <form method="POST">
         {% csrf_token %}
-        <input name="date_from" type="date" value="{{ date_from }}">
-        <input name="date_to" type="date" value="{{ date_to }}">
-        <br><button type="submit">Recount</button>
+        <tr><td><input name="date_from" type="date" value="{{ date_from }}"></td></tr>
+        <tr><td><input name="date_to" type="date" value="{{ date_to }}"></td></tr>
+        <tr><td><button type="submit">Recount</button></td></tr>
     </form>
+    </table>
     <table>
         <tr>
             <th>Value</th>
